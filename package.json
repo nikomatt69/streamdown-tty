@@ -1,0 +1,75 @@
+{
+  "name": "@nicomatt69/streamtty",
+  "version": "0.0.1",
+  "description": "A drop-in replacement for markdown rendering in TTY, designed for AI-powered streaming with blessed",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "streamtty": "dist/cli.js"
+  },
+  "homepage": "https://github.com/nikomatt69/streamtty",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nikomatt69/streamtty.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nikomatt69/streamtty/issues"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run clean && npm run build",
+    "test": "echo \"Warning: no tests specified\"",
+    "example:basic": "npx tsx examples/basic.ts",
+    "example:streaming": "npx tsx examples/streaming.ts",
+    "example:interactive": "npx tsx examples/enhanced-streaming-test.ts",
+    "example:chat": "npx tsx examples/chat.ts"
+  },
+  "keywords": [
+    "markdown",
+    "tty",
+    "terminal",
+    "blessed",
+    "streaming",
+    "ai",
+    "tui"
+  ],
+  "author": "Nicomatt69 <nicola.mattioli.95@gmail.com>",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "package.json"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "ansi-regex": "^6.0.1",
+    "asciichart": "^1.5.25",
+    "blessed": "^0.1.81",
+    "blessed-contrib": "^4.11.0",
+    "chalk": "^4.1.2",
+    "cli-highlight": "^2.1.11",
+    "katex": "^0.16.9",
+    "marked": "^13.0.3",
+    "marked-gfm-heading-id": "^4.1.2",
+    "mathjs": "^12.0.0",
+    "rehype-katex": "^7.0.0",
+    "remark-math": "^6.0.0",
+    "sanitize-html": "^2.11.0",
+    "shiki": "^1.0.0",
+    "tty-table": "^4.2.3"
+  },
+  "devDependencies": {
+    "@types/blessed": "^0.1.25",
+    "@types/node": "^20.19.20",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
